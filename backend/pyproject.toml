@@ -1,0 +1,14 @@
+[tool.pytest.ini_options]
+asyncio_mode      = "auto"
+testpaths         = ["tests"]
+python_files      = ["test_*.py"]
+python_functions  = ["test_*"]
+
+# Unit tests run by default. Integration tests require INTEGRATION=true env var.
+markers = [
+    "integration: marks tests that require Redis and a running server",
+]
+
+[tool.coverage.run]
+source = ["app"]
+omit   = ["app/core/*", "tests/*"]

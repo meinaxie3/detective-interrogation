@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Base overrides ─────────────────────────────────────────────────────── */
+:root {
+  --scrollbar-bg: #0a0a10;
+  --scrollbar-thumb: #1a1a24;
+}
+
+body {
+  background-color: #060608;
+  color: #e0d5c1;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* ── Custom scrollbar ───────────────────────────────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 3px;
+}
+
+/* ── Streaming cursor ───────────────────────────────────────────────────── */
+.streaming-cursor::after {
+  content: "▌";
+  color: #c9a84c;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Subtle scan-line effect on headers ────────────────────────────────── */
+.scanline {
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}

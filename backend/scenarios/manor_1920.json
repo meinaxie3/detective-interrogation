@@ -1,0 +1,76 @@
+{
+  "scenario_id": "manor_1920",
+  "title": "The Ashworth Manor Affair",
+  "setting": "It is 1920. Lord Edmund Ashworth has been found dead in his study at Ashworth Manor, a glass of poisoned wine beside him. The local constable has asked you to question the three people present in the house that night before the body is moved. You have one evening. Choose carefully who you pressure — and when.",
+  "crime": {
+    "victim": "Lord Edmund Ashworth",
+    "method": "arsenic in the evening wine",
+    "time_of_death": "11:45 PM",
+    "location": "the study, second floor east wing"
+  },
+  "culprit_id": "butler",
+  "true_motive": "Beckett had been embezzling from the estate accounts for three years. Lord Ashworth had discovered the discrepancy that afternoon and confronted him privately. Beckett slipped arsenic into the decanter before the evening meal.",
+  "suspects": [
+    {
+      "id": "butler",
+      "name": "James Beckett",
+      "cover_story": "Beckett claims he spent the entire evening in the kitchen, supervising the clearing of the dinner service, and retired to his quarters at 11 PM. He never entered the east wing.",
+      "actual_location": "Entered the study at 11:40 PM via the servant's passage. Was seen leaving by Clara at 11:50 PM, though she does not yet know what she saw.",
+      "alibi_hole": "The kitchen maid, Dorothea, left at 11:30 PM. After that, Beckett has no witness. He claims he was alone 'finishing inventory' but cannot produce it. The servant's passage door shows signs of recent use.",
+      "what_they_know": [
+        "He poisoned the wine decanter before dinner",
+        "Lord Ashworth confronted him about the accounts that afternoon",
+        "Clara was in the hallway near midnight — he saw her but she did not see his face clearly",
+        "The embezzlement ledger is locked in the desk in the study"
+      ],
+      "what_they_hide": [
+        "The embezzlement and the afternoon confrontation",
+        "That he used the servant's passage to reach the study",
+        "That the ledger exists and is still in the study",
+        "That he saw Clara in the hallway"
+      ],
+      "emotional_tells": "Becomes overly formal and precise when asked about finances or the afternoon. Refers to Lord Ashworth as 'His Lordship' with exaggerated reverence when nervous. Pauses slightly too long before answering questions about the servant's passage.",
+      "pressure_threshold": 8,
+      "is_culprit": true
+    },
+    {
+      "id": "niece",
+      "name": "Clara Ashworth",
+      "cover_story": "Clara claims she retired to her room after dinner and read until past midnight. She heard nothing unusual and did not leave her room.",
+      "actual_location": "Was in the second-floor hallway near the east wing at approximately 11:50 PM. She saw a figure leaving the study but assumed it was a servant. She is hiding this because she was sneaking back from a clandestine meeting with a young man in the village and does not want her reputation questioned.",
+      "alibi_hole": "Her room is directly above the study. She claims to have heard nothing, but a shot glass was knocked from the study mantelpiece during the struggle — it made a loud crack. Anyone in the room above would have heard it.",
+      "what_they_know": [
+        "She saw a male figure leaving the study around 11:50 PM",
+        "Her uncle was under financial stress — she overheard an argument weeks ago",
+        "Beckett has always had unusual access to the estate accounts"
+      ],
+      "what_they_hide": [
+        "She was not in her room — she was returning from the village",
+        "She saw someone leaving the study and said nothing",
+        "She has suspicions about Beckett but fears accusing a servant without proof"
+      ],
+      "emotional_tells": "Deflects questions about the hours between 10 PM and midnight with vague references to her book. Becomes defensive and slightly flushed when asked about sounds. More forthcoming about her uncle's financial worries than about her own whereabouts.",
+      "pressure_threshold": 4,
+      "is_culprit": false
+    },
+    {
+      "id": "doctor",
+      "name": "Dr. Harriet Voss",
+      "cover_story": "Dr. Voss was called to the manor at 7 PM to treat Lord Ashworth for a recurring chest complaint. She departed before 9 PM and returned only when summoned in the morning after the body was discovered.",
+      "actual_location": "Departed as claimed. However, she prescribed Lord Ashworth a sedative tonic that evening — the same tonic bottle is missing from the study. She is anxious that it will be mistaken for the poison, as both are colourless liquids.",
+      "alibi_hole": "She left a tonic bottle in the study. The bottle is now missing. She knows this but has not mentioned it, fearing it implicates her. Her medical bag log shows the bottle was dispensed; there is no corresponding entry for its return.",
+      "what_they_know": [
+        "Lord Ashworth was in good enough health to survive the chest complaint",
+        "She left a tonic bottle in the study that is now missing",
+        "Lord Ashworth mentioned 'a problem with the accounts' to her in passing during the examination"
+      ],
+      "what_they_hide": [
+        "The missing tonic bottle and her fear it will be confused with the poison",
+        "That Lord Ashworth mentioned account troubles — she does not want to be drawn into an investigation"
+      ],
+      "emotional_tells": "Very composed and clinical until asked about the study or her medical bag — then becomes overly thorough in her explanations, a doctor's habit of over-explaining when nervous. Will volunteer information about Lord Ashworth's health but redirect quickly if asked about items she left behind.",
+      "pressure_threshold": 5,
+      "is_culprit": false
+    }
+  ]
+}
