@@ -48,3 +48,8 @@ Desktop.ini
 
 # ── Runtime data (generated at runtime, not source) ───────────────────────────
 backend/history.json
+
+# ── Docs tooling (local playwright install for screenshots) ───────────────────
+docs/node_modules/
+docs/package.json
+docs/package-lock.json
